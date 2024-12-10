@@ -18,7 +18,6 @@ def main():
     for place in places:
         try:
             response = requests.get(url + '/' + quote(place), params=params)
-            print(response.url)
             response.raise_for_status()
             print(response.text)
         except requests.exceptions.RequestException as e:
