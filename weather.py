@@ -1,4 +1,4 @@
-from urllib.parse import quote
+from urllib.parse import quote, urljoin
 
 import requests
 
@@ -17,7 +17,7 @@ def main():
     
     for place in places:
         try:
-            response = requests.get(f'{url}/{quote(place)}', params=params)
+            response = requests.get(urljoin(url, quote(place)), params=params)
             response.raise_for_status()
             print(response.text)
         except requests.exceptions.RequestException as e:
