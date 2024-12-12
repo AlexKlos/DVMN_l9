@@ -11,7 +11,7 @@ This Python script fetches weather information for a list of places using the wt
 
 ## Requirements
 - Python 3.8 or later.
-- `requests` library (install via `pip install requests`).
+- `requests` library (`requests 2.32.3` tested).
 
 ## Setup
 1. Clone the repository or download the script.
